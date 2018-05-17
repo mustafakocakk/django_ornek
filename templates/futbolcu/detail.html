@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block body %}
+<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+    <thead>
+                      <tr>
+                        <th>Forma No</th>
+                        <th>İsim</th>
+                        <th>Pozisyon</th>
+                        <th>Doğum Tarihi</th>
+                        <th>Yas</th>
+                        <th>Boy</th>
+                        <th>Kullandığı Ayak</th>
+                        <th>Takima Katılma Tarihi</th>
+                        <th>Sozlesme Bitis Tarihi</th>
+                        <th>Piyasa Değeri</th>
+                        <th>Güncel  Takım</th>
+                      </tr>
+    </thead>
+<tbody>
+                      <tr>
+                        <td>{{ post.no }}</td>
+                        <td>{{ post.name }}</td>
+                        <td>{{ post.pozisyon }}</td>
+                        <td>{{ post.dogum_tarihi }}</td>
+                        <td>{{ post.yas }}</td>
+                        <td>{{ post.boy }}</td>
+                        <td>{{ post.ayak }}</td>
+                        <td>{{ post.takima_giris }}</td>
+                        <td>{{ post.sozlesme_son}}</td>
+                        <td>{{ post.deger }}</td>
+                        <td>{{ post.takim }}</td>
+                      </tr>
+</tbody>
+
+                    </table>
+
+{% endblock %}

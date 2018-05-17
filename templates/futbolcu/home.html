@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block body %}
+					<legend>Player List</legend>
+						<table id="example" >
+							<thead>
+								<tr>
+
+                                    <th>name</th>
+                                    <th style="margin-left: 5%">    </th>
+
+								</tr>
+							</thead>
+							<tbody>
+                                     {% for post in posts %}
+						<!-- Kayitlari listeleyelim... -->
+
+									<tr>
+
+                                        <td>{{ post.name }}</td>
+                                    <td><a href="{{post.get_absolute_url}}" class="btn btn-primary" role="button" style="margin-left: 50%">İncele</a></td>
+
+
+									</tr>
+								{% endfor %}
+							</tbody>
+						</table>
+
+
+    {% csrf_token %}
+
+
+{% endblock %}
